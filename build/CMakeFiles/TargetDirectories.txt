@@ -1,0 +1,4 @@
+/home/kk/Desktop/socket/build/CMakeFiles/server.dir
+/home/kk/Desktop/socket/build/CMakeFiles/client.dir
+/home/kk/Desktop/socket/build/CMakeFiles/edit_cache.dir
+/home/kk/Desktop/socket/build/CMakeFiles/rebuild_cache.dir
