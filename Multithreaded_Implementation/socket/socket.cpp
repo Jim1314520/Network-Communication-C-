@@ -66,15 +66,7 @@ bool socket::connect(const string & ip, int port){
     }
     return true;
 }
-// int socket::accept(){
-//   int connfd = ::accept(m_sockfd, nullptr,nullptr ); 
-//   if (connfd < 0) {
-//       std::cerr << "Accept failed: " << strerror(errno) << std::endl;
-//       return -1;
-//   }
-//   return connfd;
 
-// }
 
 int socket::accept(string& client_ip, int& client_port) {
     struct sockaddr_in addr;

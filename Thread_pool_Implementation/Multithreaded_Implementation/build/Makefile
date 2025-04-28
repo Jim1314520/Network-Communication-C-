@@ -57,10 +57,10 @@ RM = /home/kk/cmake-3.28.3-linux-x86_64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kk/Desktop/socket
+CMAKE_SOURCE_DIR = /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kk/Desktop/socket/build
+CMAKE_BINARY_DIR = /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kk/Desktop/socket/build/CMakeFiles /home/kk/Desktop/socket/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/build/CMakeFiles /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kk/Desktop/socket/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -271,6 +271,33 @@ socket/socket.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/socket.cpp.s
 .PHONY : socket/socket.cpp.s
 
+socket/thread_pool.o: socket/thread_pool.cpp.o
+.PHONY : socket/thread_pool.o
+
+# target to build an object file
+socket/thread_pool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/thread_pool.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/thread_pool.cpp.o
+.PHONY : socket/thread_pool.cpp.o
+
+socket/thread_pool.i: socket/thread_pool.cpp.i
+.PHONY : socket/thread_pool.i
+
+# target to preprocess a source file
+socket/thread_pool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/thread_pool.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/thread_pool.cpp.i
+.PHONY : socket/thread_pool.cpp.i
+
+socket/thread_pool.s: socket/thread_pool.cpp.s
+.PHONY : socket/thread_pool.s
+
+# target to generate assembly for a file
+socket/thread_pool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/thread_pool.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/thread_pool.cpp.s
+.PHONY : socket/thread_pool.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -296,6 +323,9 @@ help:
 	@echo "... socket/socket.o"
 	@echo "... socket/socket.i"
 	@echo "... socket/socket.s"
+	@echo "... socket/thread_pool.o"
+	@echo "... socket/thread_pool.i"
+	@echo "... socket/thread_pool.s"
 .PHONY : help
 
 

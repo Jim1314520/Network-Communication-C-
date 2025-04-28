@@ -1,6 +1,7 @@
 CMakeFiles/client.dir/socket/socket.cpp.o: \
- /home/kk/Desktop/socket/socket/socket.cpp /usr/include/stdc-predef.h \
- /home/kk/Desktop/socket/socket/socket.h \
+ /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/socket.cpp \
+ /usr/include/stdc-predef.h \
+ /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/socket.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/string \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \

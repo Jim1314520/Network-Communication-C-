@@ -1,4 +1,4 @@
-# Install script for directory: /home/kk/Desktop/socket
+# Install script for directory: /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/kk/Desktop/socket/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

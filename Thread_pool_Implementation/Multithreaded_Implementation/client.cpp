@@ -1,30 +1,29 @@
 #include <iostream>
-#include "socket/client_socket.h"
-
+#include "client_socket.h"
 using namespace hy::socket;
-
+#include <thread>
 int main() {
-   
-//     // 1. 创建 socket
-//     socket client;
-
-//     // 2. 配置服务器地址
-//    if (!client.connect("127.0.0.1", 8080)) {  // 可能会发生阻塞
-//     std::cerr << "Failed to connect to server.\n";
-//     return -1;
-//    }
     clientsocket client("127.0.0.1", 8080);
-    // 3. 向服务端发送数据
-    string data = "hello world";
-    client.send(data.c_str(), data.size());   // 可能会发生阻塞
-
-    // 4. 接受服务端的数据
+    std::cout << "Connected to server.\n";
+    // 自动发5条消息
     char buf[1024] = {0};
-    client.recv(buf, data.size()); // 可能会发生阻塞
-    std::cout << buf << std::endl;
+    for (int i = 0; i < 5; ++i) {
+        std::string data = "Auto message " + std::to_string(i);
+        client.send(data.c_str(), data.size());
 
-    // 6. 关闭 socket
-   // client.close();
-   
+        int n = client.recv(buf, sizeof(buf) - 1);
+        if (n > 0) {
+            buf[n] = '\0';
+            std::cout << "[Server Echo]: " << buf << std::endl;
+        }
+
+        std::this_thread::sleep_for(std::chrono::seconds(1)); // 每条间隔1秒
+    }
+    // 发送完后保持连接，防止退出
+    std::cout << "All messages sent. Keeping connection open...\n";
+
+    while (true) {
+        std::this_thread::sleep_for(std::chrono::seconds(10));
+    }
     return 0;
 }
