@@ -19,7 +19,7 @@ socket::socket(){
 socket::~socket() {
   close();
 }
-
+// 使用已有 sockfd 的构造函数
 socket::socket(int sockfd)  : m_ip(""),m_port(0), m_sockfd(sockfd) {
 
 }
@@ -30,7 +30,7 @@ bool socket::bind(const string & ip, int port){
     sockaddr.sin_family = AF_INET;           // 使用 IPv4
     sockaddr.sin_port = htons(port);         // 设置端口（主机序转网络序）
     if(ip.empty()){
-      sockaddr.sin_addr.s_addr = htonl(INADDR_ANY);
+      sockaddr.sin_addr.s_addr = htonl(INADDR_ANY); //// 绑定任意本地地址 
     } else{
       sockaddr.sin_addr.s_addr = inet_addr(ip.c_str());   // 任意本地地址（0.0.0.0）
     }
@@ -39,11 +39,11 @@ bool socket::bind(const string & ip, int port){
         std::cerr << "Bind failed: " << strerror(errno) << std::endl;
         return false;
     } else {
-        std::cout << "Bind successful on port 8080." << std::endl;
+        std::cout << "Bind successful on port " << port << std::endl;
     }
     return true;
 }
-bool socket::listen(int backlog){
+bool socket::listen(int backlog){ //backlog 控制最大连接排队数量
  if(::listen(m_sockfd, backlog) < 0){
       std::cerr << "Listen failed: " << strerror(errno) << std::endl;
       return false;
@@ -66,20 +66,11 @@ bool socket::connect(const string & ip, int port){
     }
     return true;
 }
-// int socket::accept(){
-//   int connfd = ::accept(m_sockfd, nullptr,nullptr ); 
-//   if (connfd < 0) {
-//       std::cerr << "Accept failed: " << strerror(errno) << std::endl;
-//       return -1;
-//   }
-//   return connfd;
-
-// }
 
 int socket::accept(string& client_ip, int& client_port) {
     struct sockaddr_in addr;
     socklen_t addr_len = sizeof(addr);
-    int connfd = ::accept(m_sockfd, (struct sockaddr*)&addr, &addr_len);
+    int connfd = ::accept(m_sockfd, (struct sockaddr*)&addr, &addr_len); // 返回用于通信的文件描述符
     if (connfd < 0) {
         std::cerr << "Accept failed: " << strerror(errno) << std::endl;
         return -1;
@@ -112,7 +103,7 @@ bool socket::set_non_blocking(){
     std::cerr << "fcntl F_GETFL failed:" << strerror(errno) << std::endl;
     return false;
   }
-  flags |= O_NONBLOCK;
+  flags |= O_NONBLOCK; // 添加非阻塞标志
   if(fcntl(m_sockfd, F_SETFL, flags) < 0){
     std::cerr << "fcntl F_SETFL failed: " << strerror(errno) << std::endl;
     return false;
@@ -120,7 +111,7 @@ bool socket::set_non_blocking(){
   std::cout << "Socket set to non-blocking mode." << std::endl;
   return true;
 }
-
+// 设置发送缓冲区大小
 bool socket::set_send_buffer(int size){
   int buff_size = size;
   if(setsockopt(m_sockfd, SOL_SOCKET,  SO_SNDBUF,&buff_size, sizeof(buff_size)) < 0){
@@ -130,7 +121,7 @@ bool socket::set_send_buffer(int size){
   std::cout << "✅ Send buffer size set to " << buff_size << " bytes" << std::endl;
   return true;
 }
-
+// 设置接收缓冲区大小
 bool socket::set_recv_buffer(int size){
    if (setsockopt(m_sockfd, SOL_SOCKET, SO_RCVBUF, &size, sizeof(size)) < 0) {
         std::cerr << "❌ Failed to set receive buffer size: " << strerror(errno) << std::endl;
@@ -139,6 +130,7 @@ bool socket::set_recv_buffer(int size){
     std::cout << "✅ Receive buffer size set to " << size << " bytes" << std::endl;
     return true;
 }
+// 控制关闭时是否等待数据发送完毕
 bool socket::set_linger(bool active, int seconds){
     struct linger ling;
     std::memset(&ling, 0, sizeof(ling));
