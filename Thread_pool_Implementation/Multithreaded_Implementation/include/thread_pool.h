@@ -10,7 +10,7 @@
 
 class ThreadPool {
 public:
-    explicit ThreadPool(size_t thread_count = 8);
+    explicit ThreadPool(size_t thread_count = 8); // 构造函数，创建线程
     ~ThreadPool();
 
     void enqueue(std::function<void()> task);

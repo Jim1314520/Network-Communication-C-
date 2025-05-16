@@ -5,9 +5,9 @@
 #include <string>
 
 
-#include "socket/server_socket.h"
-#include "socket/client_socket.h"
-#include "socket/thread_pool.h"
+#include "include/server_socket.h"
+#include "include/client_socket.h"
+#include "include/thread_pool.h"
 using namespace hy::socket;
 
 void handle_session(int connfd, const std::string& client_ip, int client_port)

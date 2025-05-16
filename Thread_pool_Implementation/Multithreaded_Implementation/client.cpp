@@ -11,7 +11,7 @@ int main() {
         std::string data = "Auto message " + std::to_string(i);
         client.send(data.c_str(), data.size());
 
-        int n = client.recv(buf, sizeof(buf) - 1);
+        int n = client.recv(buf, sizeof(buf) - 1); // 最多接收 1023 字节，预留最后一个字节放 \0
         if (n > 0) {
             buf[n] = '\0';
             std::cout << "[Server Echo]: " << buf << std::endl;

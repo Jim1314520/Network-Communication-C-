@@ -9,7 +9,8 @@
 #include <fcntl.h>
 using namespace hy::socket;
 socket::socket(){
-  m_sockfd = ::socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+  // AF_INET：使用 IPv4 ； SOCK_STREAM：面向连接，TCP； IPPROTO_TCP：指定协议
+  m_sockfd = ::socket(AF_INET, SOCK_STREAM, IPPROTO_TCP); 
   if(m_sockfd < 0){
         std::cerr << "Socket creation failed: " << strerror(errno) << std::endl; 
   } else{
@@ -34,7 +35,7 @@ bool socket::bind(const string & ip, int port){
     } else{
       sockaddr.sin_addr.s_addr = inet_addr(ip.c_str());   // 任意本地地址（0.0.0.0）
     }
-    // 3. 绑定地址和端口
+    // 3. 绑定地址和端口 把 sockaddr_in 强制转换为 sockaddr*
     if (::bind(m_sockfd, (struct sockaddr*)&sockaddr, sizeof(sockaddr)) < 0) {
         std::cerr << "Bind failed: " << strerror(errno) << std::endl;
         return false;
@@ -158,7 +159,7 @@ bool socket::set_keepalive(){
     std::cout << "✅ SO_KEEPALIVE enabled on socket." << std::endl;
     return true;
 }
-
+// 启用地址复用
 bool socket::set_reuseaddr(){
     int optval = 1;
     if (setsockopt(m_sockfd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval)) < 0) {

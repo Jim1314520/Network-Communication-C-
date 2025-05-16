@@ -13,6 +13,7 @@ namespace hy{
         socket(int sockfd);
         virtual ~socket();
         bool bind(const string & ip, int port); 
+        // 开始监听连接请求（仅服务端调用，backlog 表示最大排队数量）
         bool listen(int backlog);
         bool connect(const string & ip, int port);
          // 接收客户端连接（仅服务端使用），返回新的 socket fd，并输出客户端 IP 和端口
