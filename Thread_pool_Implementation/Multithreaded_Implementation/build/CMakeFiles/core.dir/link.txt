@@ -1,0 +1,2 @@
+/opt/rh/devtoolset-9/root/usr/bin/ar qc libcore.a CMakeFiles/core.dir/socket/socket.cpp.o CMakeFiles/core.dir/socket/client_socket.cpp.o CMakeFiles/core.dir/socket/server_socket.cpp.o CMakeFiles/core.dir/socket/thread_pool.cpp.o
+/opt/rh/devtoolset-9/root/usr/bin/ranlib libcore.a

@@ -4,7 +4,7 @@
 # compile CXX with /opt/rh/devtoolset-9/root/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket
+CXX_INCLUDES = -I/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/include
 
 CXX_FLAGS = -std=gnu++17 -pthread
 

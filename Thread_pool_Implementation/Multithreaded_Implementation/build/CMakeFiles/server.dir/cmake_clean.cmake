@@ -1,14 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/server.dir/server.cpp.o"
   "CMakeFiles/server.dir/server.cpp.o.d"
-  "CMakeFiles/server.dir/socket/client_socket.cpp.o"
-  "CMakeFiles/server.dir/socket/client_socket.cpp.o.d"
-  "CMakeFiles/server.dir/socket/server_socket.cpp.o"
-  "CMakeFiles/server.dir/socket/server_socket.cpp.o.d"
-  "CMakeFiles/server.dir/socket/socket.cpp.o"
-  "CMakeFiles/server.dir/socket/socket.cpp.o.d"
-  "CMakeFiles/server.dir/socket/thread_pool.cpp.o"
-  "CMakeFiles/server.dir/socket/thread_pool.cpp.o.d"
   "server"
   "server.pdb"
 )

@@ -9,10 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/client.cpp" "CMakeFiles/client.dir/client.cpp.o" "gcc" "CMakeFiles/client.dir/client.cpp.o.d"
-  "/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/client_socket.cpp" "CMakeFiles/client.dir/socket/client_socket.cpp.o" "gcc" "CMakeFiles/client.dir/socket/client_socket.cpp.o.d"
-  "/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/server_socket.cpp" "CMakeFiles/client.dir/socket/server_socket.cpp.o" "gcc" "CMakeFiles/client.dir/socket/server_socket.cpp.o.d"
-  "/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/socket.cpp" "CMakeFiles/client.dir/socket/socket.cpp.o" "gcc" "CMakeFiles/client.dir/socket/socket.cpp.o.d"
-  "/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/thread_pool.cpp" "CMakeFiles/client.dir/socket/thread_pool.cpp.o" "gcc" "CMakeFiles/client.dir/socket/thread_pool.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

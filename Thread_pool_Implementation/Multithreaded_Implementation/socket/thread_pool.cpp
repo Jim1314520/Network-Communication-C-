@@ -21,11 +21,11 @@ ThreadPool::~ThreadPool()
 void ThreadPool::enqueue(std::function<void()> task)
 {
     {
-        std::lock_guard<std::mutex> lock(mutex_);
-        tasks_.push(std::move(task));
+        std::lock_guard<std::mutex> lock(mutex_); // 上锁保护队列
+        tasks_.push(std::move(task));  // 任务入队
         std::cout << "[ThreadPool] Task enqueued, current queue size: " << tasks_.size() << std::endl;
     }
-    cond_.notify_one();
+    cond_.notify_one();  // 唤醒一条空闲线程
 }
 
 void ThreadPool::worker()

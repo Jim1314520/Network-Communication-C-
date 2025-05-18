@@ -1,8 +1,8 @@
-CMakeFiles/client.dir/socket/server_socket.cpp.o: \
+CMakeFiles/core.dir/socket/server_socket.cpp.o: \
  /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/server_socket.cpp \
  /usr/include/stdc-predef.h \
- /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/server_socket.h \
- /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/socket.h \
+ /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/include/server_socket.h \
+ /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/include/socket.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/string \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \

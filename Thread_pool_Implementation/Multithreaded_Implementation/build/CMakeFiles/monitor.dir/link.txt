@@ -1,0 +1,1 @@
+/opt/rh/devtoolset-9/root/usr/bin/c++ CMakeFiles/monitor.dir/test_monitor.cpp.o -o monitor  libcore.a -pthread 

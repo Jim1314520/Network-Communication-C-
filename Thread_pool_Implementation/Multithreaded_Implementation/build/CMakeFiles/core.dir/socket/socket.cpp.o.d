@@ -1,8 +1,7 @@
-CMakeFiles/server.dir/socket/client_socket.cpp.o: \
- /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/client_socket.cpp \
+CMakeFiles/core.dir/socket/socket.cpp.o: \
+ /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/socket.cpp \
  /usr/include/stdc-predef.h \
- /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/client_socket.h \
- /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/socket.h \
+ /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/include/socket.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/string \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
@@ -97,4 +96,40 @@ CMakeFiles/server.dir/socket/client_socket.cpp.o: \
  /usr/include/bits/errno.h /usr/include/linux/errno.h \
  /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
  /usr/include/asm-generic/errno-base.h \
- /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/basic_string.tcc
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/basic_string.tcc \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/iostream \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/ostream \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/ios \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/ios_base.h \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/locale_classes.h \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/locale_classes.tcc \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/system_error \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux/bits/error_constants.h \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/stdexcept \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/streambuf \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/streambuf.tcc \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/basic_ios.h \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/locale_facets.h \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/cwctype \
+ /usr/include/wctype.h \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux/bits/ctype_base.h \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/streambuf_iterator.h \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux/bits/ctype_inline.h \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/locale_facets.tcc \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/basic_ios.tcc \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/ostream.tcc \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/istream \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/istream.tcc \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/cstring \
+ /usr/include/string.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ /usr/include/arpa/inet.h /usr/include/netinet/in.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/fcntl.h /usr/include/bits/fcntl.h \
+ /usr/include/bits/fcntl-linux.h /usr/include/linux/falloc.h \
+ /usr/include/bits/stat.h

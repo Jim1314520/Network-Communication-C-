@@ -83,81 +83,18 @@ CMakeFiles/client.dir/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/client.cpp.s"
 	/opt/rh/devtoolset-9/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/client.cpp -o CMakeFiles/client.dir/client.cpp.s
 
-CMakeFiles/client.dir/socket/socket.cpp.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/socket/socket.cpp.o: /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/socket.cpp
-CMakeFiles/client.dir/socket/socket.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/client.dir/socket/socket.cpp.o"
-	/opt/rh/devtoolset-9/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/socket/socket.cpp.o -MF CMakeFiles/client.dir/socket/socket.cpp.o.d -o CMakeFiles/client.dir/socket/socket.cpp.o -c /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/socket.cpp
-
-CMakeFiles/client.dir/socket/socket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/socket/socket.cpp.i"
-	/opt/rh/devtoolset-9/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/socket.cpp > CMakeFiles/client.dir/socket/socket.cpp.i
-
-CMakeFiles/client.dir/socket/socket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/socket/socket.cpp.s"
-	/opt/rh/devtoolset-9/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/socket.cpp -o CMakeFiles/client.dir/socket/socket.cpp.s
-
-CMakeFiles/client.dir/socket/client_socket.cpp.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/socket/client_socket.cpp.o: /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/client_socket.cpp
-CMakeFiles/client.dir/socket/client_socket.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/client.dir/socket/client_socket.cpp.o"
-	/opt/rh/devtoolset-9/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/socket/client_socket.cpp.o -MF CMakeFiles/client.dir/socket/client_socket.cpp.o.d -o CMakeFiles/client.dir/socket/client_socket.cpp.o -c /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/client_socket.cpp
-
-CMakeFiles/client.dir/socket/client_socket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/socket/client_socket.cpp.i"
-	/opt/rh/devtoolset-9/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/client_socket.cpp > CMakeFiles/client.dir/socket/client_socket.cpp.i
-
-CMakeFiles/client.dir/socket/client_socket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/socket/client_socket.cpp.s"
-	/opt/rh/devtoolset-9/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/client_socket.cpp -o CMakeFiles/client.dir/socket/client_socket.cpp.s
-
-CMakeFiles/client.dir/socket/server_socket.cpp.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/socket/server_socket.cpp.o: /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/server_socket.cpp
-CMakeFiles/client.dir/socket/server_socket.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/client.dir/socket/server_socket.cpp.o"
-	/opt/rh/devtoolset-9/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/socket/server_socket.cpp.o -MF CMakeFiles/client.dir/socket/server_socket.cpp.o.d -o CMakeFiles/client.dir/socket/server_socket.cpp.o -c /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/server_socket.cpp
-
-CMakeFiles/client.dir/socket/server_socket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/socket/server_socket.cpp.i"
-	/opt/rh/devtoolset-9/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/server_socket.cpp > CMakeFiles/client.dir/socket/server_socket.cpp.i
-
-CMakeFiles/client.dir/socket/server_socket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/socket/server_socket.cpp.s"
-	/opt/rh/devtoolset-9/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/server_socket.cpp -o CMakeFiles/client.dir/socket/server_socket.cpp.s
-
-CMakeFiles/client.dir/socket/thread_pool.cpp.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/socket/thread_pool.cpp.o: /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/thread_pool.cpp
-CMakeFiles/client.dir/socket/thread_pool.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/client.dir/socket/thread_pool.cpp.o"
-	/opt/rh/devtoolset-9/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/socket/thread_pool.cpp.o -MF CMakeFiles/client.dir/socket/thread_pool.cpp.o.d -o CMakeFiles/client.dir/socket/thread_pool.cpp.o -c /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/thread_pool.cpp
-
-CMakeFiles/client.dir/socket/thread_pool.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/socket/thread_pool.cpp.i"
-	/opt/rh/devtoolset-9/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/thread_pool.cpp > CMakeFiles/client.dir/socket/thread_pool.cpp.i
-
-CMakeFiles/client.dir/socket/thread_pool.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/socket/thread_pool.cpp.s"
-	/opt/rh/devtoolset-9/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/thread_pool.cpp -o CMakeFiles/client.dir/socket/thread_pool.cpp.s
-
 # Object files for target client
 client_OBJECTS = \
-"CMakeFiles/client.dir/client.cpp.o" \
-"CMakeFiles/client.dir/socket/socket.cpp.o" \
-"CMakeFiles/client.dir/socket/client_socket.cpp.o" \
-"CMakeFiles/client.dir/socket/server_socket.cpp.o" \
-"CMakeFiles/client.dir/socket/thread_pool.cpp.o"
+"CMakeFiles/client.dir/client.cpp.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
 client: CMakeFiles/client.dir/client.cpp.o
-client: CMakeFiles/client.dir/socket/socket.cpp.o
-client: CMakeFiles/client.dir/socket/client_socket.cpp.o
-client: CMakeFiles/client.dir/socket/server_socket.cpp.o
-client: CMakeFiles/client.dir/socket/thread_pool.cpp.o
 client: CMakeFiles/client.dir/build.make
+client: libcore.a
 client: CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

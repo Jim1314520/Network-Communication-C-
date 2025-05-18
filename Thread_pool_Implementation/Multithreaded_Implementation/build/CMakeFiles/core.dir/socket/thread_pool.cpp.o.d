@@ -1,7 +1,7 @@
-CMakeFiles/server.dir/socket/thread_pool.cpp.o: \
+CMakeFiles/core.dir/socket/thread_pool.cpp.o: \
  /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/thread_pool.cpp \
  /usr/include/stdc-predef.h \
- /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/thread_pool.h \
+ /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/include/thread_pool.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/vector \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/stl_algobase.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/x86_64-redhat-linux/bits/c++config.h \

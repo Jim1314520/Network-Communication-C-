@@ -1,13 +1,18 @@
 cmake_minimum_required(VERSION 3.10)
 project(SocketProject)
 
+# C++ 标准
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 包含头文件路径
-include_directories(${CMAKE_SOURCE_DIR}/socket)
+# 启用 pthread 支持
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
 
-# 收集 socket 源文件
+# 包含头文件目录
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
+# Socket 模块源码列表
 set(SOCKET_SRC
     socket/socket.cpp
     socket/client_socket.cpp
@@ -15,15 +20,19 @@ set(SOCKET_SRC
     socket/thread_pool.cpp
 )
 
-# 添加可执行文件 server
-add_executable(server server.cpp ${SOCKET_SRC})
+# 编译为静态库 core
+add_library(core STATIC ${SOCKET_SRC})
+target_include_directories(core PUBLIC ${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(core PUBLIC Threads::Threads)
 
-# 添加可执行文件 client
-add_executable(client client.cpp ${SOCKET_SRC})
+# server 可执行文件
+add_executable(server server.cpp)
+target_link_libraries(server PRIVATE core)
 
-#  关键补充：链接 pthread
-set(THREADS_PREFER_PTHREAD_FLAG ON)
-find_package(Threads REQUIRED)
+# client 可执行文件
+add_executable(client client.cpp)
+target_link_libraries(client PRIVATE core)
 
-target_link_libraries(server Threads::Threads)
-target_link_libraries(client Threads::Threads)
+# 添加测试可执行文件
+add_executable(monitor test_monitor.cpp)
+target_link_libraries(monitor PRIVATE core)

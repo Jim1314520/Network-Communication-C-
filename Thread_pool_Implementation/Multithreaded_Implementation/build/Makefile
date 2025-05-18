@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named core
+
+# Build rule for target.
+core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 core
+.PHONY : core
+
+# fast build rule for target.
+core/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/build
+.PHONY : core/fast
+
+#=============================================================================
 # Target rules for targets named server
 
 # Build rule for target.
@@ -141,6 +154,19 @@ client: cmake_check_build_system
 client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
 .PHONY : client/fast
+
+#=============================================================================
+# Target rules for targets named monitor
+
+# Build rule for target.
+monitor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 monitor
+.PHONY : monitor
+
+# fast build rule for target.
+monitor/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitor.dir/build.make CMakeFiles/monitor.dir/build
+.PHONY : monitor/fast
 
 client.o: client.cpp.o
 .PHONY : client.o
@@ -195,8 +221,7 @@ socket/client_socket.o: socket/client_socket.cpp.o
 
 # target to build an object file
 socket/client_socket.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/client_socket.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/client_socket.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/socket/client_socket.cpp.o
 .PHONY : socket/client_socket.cpp.o
 
 socket/client_socket.i: socket/client_socket.cpp.i
@@ -204,8 +229,7 @@ socket/client_socket.i: socket/client_socket.cpp.i
 
 # target to preprocess a source file
 socket/client_socket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/client_socket.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/client_socket.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/socket/client_socket.cpp.i
 .PHONY : socket/client_socket.cpp.i
 
 socket/client_socket.s: socket/client_socket.cpp.s
@@ -213,8 +237,7 @@ socket/client_socket.s: socket/client_socket.cpp.s
 
 # target to generate assembly for a file
 socket/client_socket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/client_socket.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/client_socket.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/socket/client_socket.cpp.s
 .PHONY : socket/client_socket.cpp.s
 
 socket/server_socket.o: socket/server_socket.cpp.o
@@ -222,8 +245,7 @@ socket/server_socket.o: socket/server_socket.cpp.o
 
 # target to build an object file
 socket/server_socket.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/server_socket.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/server_socket.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/socket/server_socket.cpp.o
 .PHONY : socket/server_socket.cpp.o
 
 socket/server_socket.i: socket/server_socket.cpp.i
@@ -231,8 +253,7 @@ socket/server_socket.i: socket/server_socket.cpp.i
 
 # target to preprocess a source file
 socket/server_socket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/server_socket.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/server_socket.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/socket/server_socket.cpp.i
 .PHONY : socket/server_socket.cpp.i
 
 socket/server_socket.s: socket/server_socket.cpp.s
@@ -240,8 +261,7 @@ socket/server_socket.s: socket/server_socket.cpp.s
 
 # target to generate assembly for a file
 socket/server_socket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/server_socket.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/server_socket.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/socket/server_socket.cpp.s
 .PHONY : socket/server_socket.cpp.s
 
 socket/socket.o: socket/socket.cpp.o
@@ -249,8 +269,7 @@ socket/socket.o: socket/socket.cpp.o
 
 # target to build an object file
 socket/socket.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/socket.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/socket.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/socket/socket.cpp.o
 .PHONY : socket/socket.cpp.o
 
 socket/socket.i: socket/socket.cpp.i
@@ -258,8 +277,7 @@ socket/socket.i: socket/socket.cpp.i
 
 # target to preprocess a source file
 socket/socket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/socket.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/socket.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/socket/socket.cpp.i
 .PHONY : socket/socket.cpp.i
 
 socket/socket.s: socket/socket.cpp.s
@@ -267,8 +285,7 @@ socket/socket.s: socket/socket.cpp.s
 
 # target to generate assembly for a file
 socket/socket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/socket.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/socket.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/socket/socket.cpp.s
 .PHONY : socket/socket.cpp.s
 
 socket/thread_pool.o: socket/thread_pool.cpp.o
@@ -276,8 +293,7 @@ socket/thread_pool.o: socket/thread_pool.cpp.o
 
 # target to build an object file
 socket/thread_pool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/thread_pool.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/thread_pool.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/socket/thread_pool.cpp.o
 .PHONY : socket/thread_pool.cpp.o
 
 socket/thread_pool.i: socket/thread_pool.cpp.i
@@ -285,8 +301,7 @@ socket/thread_pool.i: socket/thread_pool.cpp.i
 
 # target to preprocess a source file
 socket/thread_pool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/thread_pool.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/thread_pool.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/socket/thread_pool.cpp.i
 .PHONY : socket/thread_pool.cpp.i
 
 socket/thread_pool.s: socket/thread_pool.cpp.s
@@ -294,9 +309,32 @@ socket/thread_pool.s: socket/thread_pool.cpp.s
 
 # target to generate assembly for a file
 socket/thread_pool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/socket/thread_pool.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/socket/thread_pool.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/socket/thread_pool.cpp.s
 .PHONY : socket/thread_pool.cpp.s
+
+test_monitor.o: test_monitor.cpp.o
+.PHONY : test_monitor.o
+
+# target to build an object file
+test_monitor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitor.dir/build.make CMakeFiles/monitor.dir/test_monitor.cpp.o
+.PHONY : test_monitor.cpp.o
+
+test_monitor.i: test_monitor.cpp.i
+.PHONY : test_monitor.i
+
+# target to preprocess a source file
+test_monitor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitor.dir/build.make CMakeFiles/monitor.dir/test_monitor.cpp.i
+.PHONY : test_monitor.cpp.i
+
+test_monitor.s: test_monitor.cpp.s
+.PHONY : test_monitor.s
+
+# target to generate assembly for a file
+test_monitor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitor.dir/build.make CMakeFiles/monitor.dir/test_monitor.cpp.s
+.PHONY : test_monitor.cpp.s
 
 # Help Target
 help:
@@ -307,6 +345,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... client"
+	@echo "... core"
+	@echo "... monitor"
 	@echo "... server"
 	@echo "... client.o"
 	@echo "... client.i"
@@ -326,6 +366,9 @@ help:
 	@echo "... socket/thread_pool.o"
 	@echo "... socket/thread_pool.i"
 	@echo "... socket/thread_pool.s"
+	@echo "... test_monitor.o"
+	@echo "... test_monitor.i"
+	@echo "... test_monitor.s"
 .PHONY : help
 
 

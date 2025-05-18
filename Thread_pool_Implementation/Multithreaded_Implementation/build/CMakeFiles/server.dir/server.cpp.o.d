@@ -170,10 +170,12 @@ CMakeFiles/server.dir/server.cpp.o: \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/algorithmfwd.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/stl_heap.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/uniform_int_dist.h \
- /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/server_socket.h \
- /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/socket.h \
- /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/client_socket.h \
- /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/socket/thread_pool.h \
+ /opt/rh/devtoolset-9/root/usr/include/c++/9/cstring \
+ /usr/include/string.h \
+ /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/include/server_socket.h \
+ /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/include/socket.h \
+ /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/include/client_socket.h \
+ /home/kk/Desktop/socket/Thread_pool_Implementation/Multithreaded_Implementation/include/thread_pool.h \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/queue \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/deque \
  /opt/rh/devtoolset-9/root/usr/include/c++/9/bits/stl_deque.h \
