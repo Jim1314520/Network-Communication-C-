@@ -12,6 +12,10 @@
 #include <arpa/inet.h>
 #include <signal.h>
 
+// ✅ 日志文件输出（测试监控）
+std::ofstream log_file("monitor_log.txt");
+#define LOG(x) do { std::cout << x; log_file << x; } while(0)
+
 struct ResourceUsage {
     int threads = 0;
     long memory_kb = 0;
@@ -42,6 +46,8 @@ void spawn_clients(int num_clients, int port, std::vector<int>& sockets) {
         addr.sin_port = htons(port);
         inet_pton(AF_INET, "127.0.0.1", &addr.sin_addr);
         if (connect(sock, (sockaddr*)&addr, sizeof(addr)) == 0) {
+            std::string msg = "Hello from client " + std::to_string(i);
+            send(sock, msg.c_str(), msg.size(), 0); // 主动发送数据，触发服务端 recv
             sockets.push_back(sock);
         } else {
             close(sock);
@@ -69,32 +75,31 @@ void stop_server(pid_t pid) {
 }
 
 void test_mode(const std::string& label, bool use_pool, int duration_sec, int num_clients) {
-    std::cout << "=== [" << label << "] ===" << std::endl;
+    LOG("\n=== [" << label << "] ===\n" << std::string(40, '-') << "\n");
     pid_t pid = start_server(use_pool);
-    std::this_thread::sleep_for(std::chrono::seconds(1)); // wait for server init
+    std::this_thread::sleep_for(std::chrono::seconds(1));
 
     std::vector<int> client_sockets;
     spawn_clients(num_clients, 8080, client_sockets);
 
     for (int i = 0; i < duration_sec; ++i) {
         ResourceUsage usage = ResourceUsage::from_pid(pid);
-        std::cout << "Sec " << i
-                  << " | Threads: " << usage.threads
-                  << " | Mem: " << usage.memory_kb << " KB" << std::endl;
+        LOG("Sec " << i
+            << " | Threads: " << usage.threads
+            << " | Mem: " << usage.memory_kb << " KB\n");
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 
     for (int sock : client_sockets) close(sock);
     stop_server(pid);
-    std::cout << std::endl;
+    LOG("\n");
 }
 
 int main() {
     const int duration = 10;
     const int clients = 100;
     test_mode("THREAD POOL", true, duration, clients);
-    std::cout << "==============\n" << std::endl;
-
     test_mode("NO POOL", false, duration, clients);
+    log_file.close();
     return 0;
 }

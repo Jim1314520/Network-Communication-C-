@@ -1,0 +1,28 @@
+
+=== [THREAD POOL] ===
+----------------------------------------
+Sec 0 | Threads: 33 | Mem: 3704 KB
+Sec 1 | Threads: 33 | Mem: 3704 KB
+Sec 2 | Threads: 33 | Mem: 3704 KB
+Sec 3 | Threads: 33 | Mem: 3704 KB
+Sec 4 | Threads: 33 | Mem: 3704 KB
+Sec 5 | Threads: 33 | Mem: 3704 KB
+Sec 6 | Threads: 33 | Mem: 3704 KB
+Sec 7 | Threads: 33 | Mem: 3704 KB
+Sec 8 | Threads: 33 | Mem: 3704 KB
+Sec 9 | Threads: 33 | Mem: 3704 KB
+
+
+=== [NO POOL] ===
+----------------------------------------
+Sec 0 | Threads: 109 | Mem: 2184 KB
+Sec 1 | Threads: 109 | Mem: 2184 KB
+Sec 2 | Threads: 109 | Mem: 2184 KB
+Sec 3 | Threads: 109 | Mem: 2184 KB
+Sec 4 | Threads: 109 | Mem: 2184 KB
+Sec 5 | Threads: 105 | Mem: 2200 KB
+Sec 6 | Threads: 9 | Mem: 1432 KB
+Sec 7 | Threads: 9 | Mem: 1432 KB
+Sec 8 | Threads: 9 | Mem: 1432 KB
+Sec 9 | Threads: 9 | Mem: 1432 KB
+

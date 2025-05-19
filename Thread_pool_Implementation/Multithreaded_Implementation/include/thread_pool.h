@@ -10,17 +10,23 @@
 
 class ThreadPool {
 public:
-    explicit ThreadPool(size_t thread_count = 8); // 构造函数，创建线程
+    explicit ThreadPool(size_t core_threads = 8, size_t max_threads = 32, size_t max_queue_size = 100);
     ~ThreadPool();
 
-    void enqueue(std::function<void()> task);
+    bool enqueue(std::function<void()> task);
 
 private:
-    void worker();  // 每个工作线程执行的函数
+    void worker();
+    void try_spawn_worker();
 
     std::vector<std::thread> workers_;
     std::queue<std::function<void()>> tasks_;
     std::mutex mutex_;
     std::condition_variable cond_;
     std::atomic<bool> stop_;
+
+    size_t core_threads_;
+    size_t max_threads_;
+    size_t max_queue_size_;
+    std::atomic<size_t> active_threads_;
 };
